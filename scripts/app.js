@@ -36,6 +36,43 @@ const makeIcon = (name) => `
   </svg>
 `;
 
+const makeProductVisual = (name) => {
+  const visualMap = {
+    cocktail: '<path d="M28 18h60L58 56 28 18Z" fill="url(#drinkGold)" opacity=".92"/><path d="M58 56v35" stroke="#EAD395" stroke-width="5" stroke-linecap="round"/><path d="M42 94h32" stroke="#EAD395" stroke-width="5" stroke-linecap="round"/><circle cx="73" cy="31" r="7" fill="#B65D2F"/><path d="M36 30h42" stroke="#fff" stroke-opacity=".28" stroke-width="4"/>',
+    alcohol: '<path d="M42 18h34l-4 78H46L42 18Z" fill="url(#drinkAmber)" opacity=".9"/><path d="M45 48h28" stroke="#EAD395" stroke-width="4" opacity=".8"/><path d="M48 18h22" stroke="#fff" stroke-opacity=".34" stroke-width="4"/><path d="M78 18l12-10" stroke="#EAD395" stroke-width="4" stroke-linecap="round"/>',
+    shot: '<path d="M38 20h40l-6 76H44L38 20Z" fill="url(#drinkAmber)" opacity=".92"/><path d="M42 52h32" stroke="#EAD395" stroke-width="4"/><path d="M45 22h28" stroke="#fff" stroke-opacity=".32" stroke-width="4"/>',
+    lemonade: '<circle cx="58" cy="58" r="34" fill="url(#frostGlass)" opacity=".88"/><path d="M58 25v66M25 58h66M34 34l48 48M82 34 34 82" stroke="#EAD395" stroke-width="3" opacity=".8"/><circle cx="77" cy="31" r="9" fill="#C8A45D"/>',
+    water: '<path d="M58 15s34 39 34 62a34 34 0 0 1-68 0c0-23 34-62 34-62Z" fill="url(#frostGlass)" opacity=".78"/><path d="M41 78c8 12 24 16 36 6" stroke="#fff" stroke-opacity=".36" stroke-width="5" stroke-linecap="round"/>',
+    coffee: '<path d="M28 40h52v28a22 22 0 0 1-22 22h-8a22 22 0 0 1-22-22V40Z" fill="url(#coffeeCup)"/><path d="M80 48h8a12 12 0 0 1 0 24h-8" stroke="#EAD395" stroke-width="6"/><path d="M39 25c-8-9 8-12 0-20M58 25c-8-9 8-12 0-20" stroke="#fff" stroke-opacity=".34" stroke-width="4" stroke-linecap="round"/>',
+    hookah: '<path d="M58 16v48" stroke="#EAD395" stroke-width="7" stroke-linecap="round"/><path d="M42 30h32M38 64h40" stroke="#C8A45D" stroke-width="6" stroke-linecap="round"/><path d="M43 66 34 96h48L73 66Z" fill="url(#smokeGold)" opacity=".88"/><path d="M72 52c34 0 30 38 12 42" stroke="#EAD395" stroke-width="6" fill="none" stroke-linecap="round"/><path d="M84 94c16 8 26-1 26-16" stroke="#8F6E35" stroke-width="5" fill="none" stroke-linecap="round"/>',
+    food: '<ellipse cx="58" cy="72" rx="42" ry="20" fill="url(#plate)" opacity=".95"/><circle cx="45" cy="63" r="10" fill="#8A5A35"/><circle cx="62" cy="58" r="12" fill="#C8A45D"/><circle cx="73" cy="70" r="9" fill="#B65D2F"/><path d="M28 76c16 13 45 15 62 0" stroke="#fff" stroke-opacity=".25" stroke-width="5"/>',
+    cheese: '<path d="M24 76 92 38v44H24v-6Z" fill="url(#plate)" opacity=".95"/><circle cx="62" cy="64" r="5" fill="#090807" opacity=".4"/><circle cx="76" cy="56" r="4" fill="#090807" opacity=".4"/>',
+    meat: '<path d="M36 70c-13-23 10-52 36-44 26 8 30 37 9 56-15 14-35 12-45-12Z" fill="url(#meat)" opacity=".94"/><path d="M35 72 20 90M17 94l10 10" stroke="#EAD395" stroke-width="6" stroke-linecap="round"/>',
+    fries: '<path d="M34 48h48l-6 52H40L34 48Z" fill="url(#drinkGold)" opacity=".9"/><path d="M42 48 36 14M56 48V10M70 48l8-32" stroke="#EAD395" stroke-width="7" stroke-linecap="round"/>',
+    nuts: '<ellipse cx="48" cy="62" rx="17" ry="30" fill="url(#plate)" transform="rotate(-18 48 62)"/><ellipse cx="70" cy="65" rx="17" ry="30" fill="url(#drinkAmber)" transform="rotate(20 70 65)"/><path d="M42 48c10 11 12 25 4 39M75 48c-9 11-11 25-3 39" stroke="#090807" stroke-opacity=".36" stroke-width="4"/>',
+    board: '<rect x="24" y="30" width="68" height="58" rx="18" fill="url(#woodBoard)"/><circle cx="43" cy="55" r="10" fill="#B65D2F"/><rect x="58" y="44" width="22" height="16" rx="4" fill="#D8C6A1"/><path d="M38 74h40" stroke="#EAD395" stroke-width="5" stroke-linecap="round"/>',
+    default: '<path d="M58 18 94 40v36L58 98 22 76V40l36-22Z" fill="url(#smokeGold)" opacity=".86"/><path d="M58 34v48M42 46l16 16 16-16" stroke="#EAD395" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>'
+  };
+  const visual = visualMap[name] || visualMap.default;
+
+  return `
+    <svg class="menu-card__visual" viewBox="0 0 116 116" aria-hidden="true">
+      <defs>
+        <linearGradient id="drinkGold" x1="20" y1="16" x2="92" y2="102"><stop stop-color="#F1D493"/><stop offset="1" stop-color="#8F6E35"/></linearGradient>
+        <linearGradient id="drinkAmber" x1="24" y1="12" x2="88" y2="102"><stop stop-color="#D8A24B"/><stop offset=".55" stop-color="#7A2D17"/><stop offset="1" stop-color="#160D08"/></linearGradient>
+        <linearGradient id="frostGlass" x1="20" y1="12" x2="92" y2="104"><stop stop-color="#D8F5F7"/><stop offset=".55" stop-color="#8FB8BD"/><stop offset="1" stop-color="#182426"/></linearGradient>
+        <linearGradient id="coffeeCup" x1="26" y1="28" x2="90" y2="96"><stop stop-color="#D8C6A1"/><stop offset="1" stop-color="#4A321F"/></linearGradient>
+        <linearGradient id="smokeGold" x1="18" y1="14" x2="98" y2="104"><stop stop-color="#EAD395"/><stop offset="1" stop-color="#2B1D14"/></linearGradient>
+        <linearGradient id="plate" x1="18" y1="18" x2="98" y2="98"><stop stop-color="#EAD395"/><stop offset="1" stop-color="#8A5A35"/></linearGradient>
+        <linearGradient id="meat" x1="20" y1="20" x2="96" y2="100"><stop stop-color="#C8784E"/><stop offset="1" stop-color="#40150D"/></linearGradient>
+        <linearGradient id="woodBoard" x1="20" y1="20" x2="96" y2="96"><stop stop-color="#8A5A35"/><stop offset="1" stop-color="#24150D"/></linearGradient>
+      </defs>
+      <ellipse cx="58" cy="96" rx="34" ry="9" fill="#000" opacity=".28"/>
+      ${visual}
+    </svg>
+  `;
+};
+
 const groupIcons = {
   food: "food",
   alcohol: "alcohol",
@@ -141,6 +178,7 @@ const cardClassFor = (layout) => {
 
 const createMenuCard = (item, index, layout, sectionId) => {
   const card = document.createElement("article");
+  const visualType = iconForItem(item, layout, sectionId);
   card.className = "menu-card";
   card.style.setProperty("--accent", colorMap[item.accent] || colorMap.gold);
   card.style.transitionDelay = `${Math.min(index * 55, 220)}ms`;
@@ -157,6 +195,7 @@ const createMenuCard = (item, index, layout, sectionId) => {
       <p>${item.description}</p>
       <span class="price">${item.price}</span>
     </div>
+    ${makeProductVisual(visualType)}
   `;
 
   if (layout === "menuList" || layout === "showcaseList" || layout === "hookah") return card;
