@@ -107,7 +107,6 @@ const menuBook = document.querySelector("#menu-book");
 const menuRoot = document.querySelector("#menu-root");
 const bookTabs = document.querySelector("#book-tabs");
 const bookTitle = document.querySelector("#book-title");
-const bookIntro = document.querySelector("#book-intro");
 const bookEyebrow = document.querySelector("#book-eyebrow");
 const bookClose = document.querySelector(".menu-book__close");
 const sourceSections = window.ODIN_MENU_SECTIONS || [];
@@ -117,12 +116,11 @@ const hookahSection = {
   label: "Кальян",
   eyebrow: "Smoke ritual",
   title: "Кальян",
-  intro: "Кальян відкривається як окрема атмосфера всередині меню: дим, скло, метал і золоте світло ODIN.",
   layout: "hookah",
   items: [
-    { name: "Подача ODIN", description: "Темна сцена з кальяном, димом і мʼяким золотим світлом.", price: "деталі в барі", accent: "gold" },
-    { name: "Мікси", description: "Місце під майбутні авторські смаки, чаші та тютюн.", price: "скоро", accent: "stone" },
-    { name: "Атмосфера", description: "Кальян не стоїть на головному екрані, а відкривається тільки в цій вкладці.", price: "ODIN", accent: "ember" }
+    { name: "Подача ODIN", photo: "assets/menu-photos/hookah-podacha-odin.jpg", description: "Темна сцена з кальяном, димом і мʼяким золотим світлом.", price: "деталі в барі", accent: "gold" },
+    { name: "Мікси", photo: "assets/menu-photos/hookah-miksy.jpg", description: "Місце під майбутні авторські смаки, чаші та тютюн.", price: "скоро", accent: "stone" },
+    { name: "Атмосфера", photo: "assets/menu-photos/hookah-atmosfera.jpg", description: "Кальян не стоїть на головному екрані, а відкривається тільки в цій вкладці.", price: "ODIN", accent: "ember" }
   ]
 };
 
@@ -134,7 +132,6 @@ const menuGroups = [
     label: "Їжа",
     eyebrow: "Kitchen",
     title: "Їжа",
-    intro: "Закуски до пива та фірмові дошки для компанії у стилі темної меню-книги ODIN.",
     sections: ["snacks", "boards"]
   },
   {
@@ -142,7 +139,6 @@ const menuGroups = [
     label: "Алкогольні напої",
     eyebrow: "Bar",
     title: "Алкогольні напої",
-    intro: "Коктейлі, пиво і шоти: класика з характером ODIN і чіткою барною подачею.",
     sections: ["cocktails", "beer", "shots"]
   },
   {
@@ -150,7 +146,6 @@ const menuGroups = [
     label: "Безалкогольні",
     eyebrow: "Zero proof",
     title: "Безалкогольні напої",
-    intro: "Лимонади, вода, тоніки, соки та кава для легшого ритму вечора.",
     sections: ["lemonades", "soft", "coffee"]
   },
   {
@@ -158,7 +153,6 @@ const menuGroups = [
     label: "Кальян",
     eyebrow: "Smoke",
     title: "Кальян",
-    intro: "Окрема кальянна сцена всередині меню, без переходу на іншу сторінку.",
     sections: ["hookah"]
   }
 ];
@@ -183,7 +177,7 @@ const createMenuCard = (item, index, layout, sectionId) => {
   card.style.setProperty("--accent", colorMap[item.accent] || colorMap.gold);
   card.style.transitionDelay = `${Math.min(index * 55, 220)}ms`;
   card.innerHTML = `
-    <div class="menu-card__image" aria-hidden="true"></div>
+    ${item.photo ? `<img class="menu-card__photo" src="${item.photo}" alt="" loading="lazy" decoding="async">` : '<div class="menu-card__image" aria-hidden="true"></div>'}
     <div class="menu-card__body">
       <div class="menu-card__title">
         <span class="menu-card__icon">${makeIcon(iconForItem(item, layout, sectionId))}</span>
@@ -195,7 +189,7 @@ const createMenuCard = (item, index, layout, sectionId) => {
       <p>${item.description}</p>
       <span class="price">${item.price}</span>
     </div>
-    ${makeProductVisual(visualType)}
+    ${item.photo ? "" : makeProductVisual(visualType)}
   `;
 
   if (layout === "menuList" || layout === "showcaseList" || layout === "hookah") return card;
@@ -250,7 +244,6 @@ const renderSection = (section) => {
         <p class="section-kicker">${section.eyebrow}</p>
         <h2>${section.title}</h2>
       </div>
-      <p>${section.intro}</p>
     </div>
     <div class="${cardClassFor(section.layout)}"></div>
   `;
@@ -289,7 +282,6 @@ const openGroup = (groupId) => {
   body.classList.add("book-open");
   bookEyebrow.textContent = group.eyebrow;
   bookTitle.textContent = group.title;
-  bookIntro.textContent = group.intro;
   menuBook.classList.add("is-open");
   renderSectionTabs(group);
   setActiveSection(group.sections[0]);
