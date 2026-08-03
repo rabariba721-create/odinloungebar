@@ -251,6 +251,7 @@ const renderSection = (section) => {
   const grid = page.querySelector(`.${cardClassFor(section.layout)}`);
   section.items.forEach((item, index) => grid.appendChild(createMenuCard(item, index, section.layout, section.id)));
   menuRoot.appendChild(page);
+  menuRoot.scrollTop = 0;
 
   requestAnimationFrame(() => page.classList.add("is-visible"));
 
