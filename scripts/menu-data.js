@@ -19,15 +19,15 @@ window.ODIN_MENU_SECTIONS = [
     title: "Закуски",
     layout: "menuList",
     items: [
-      { name: "Оливки", price: "110 грн", accent: "frost" },
+      { name: "Оливки", photo: "assets/menu-photos/olivky.jpg", price: "110 грн", accent: "frost" },
       { name: "Сир косичка копчений", photo: "assets/menu-photos/syr-kosychka-kopchenyi.jpg", price: "90 грн", accent: "ember" },
-      { name: "Сир косичка біла", price: "90 грн", accent: "cream" },
+      { name: "Сир косичка біла", photo: "assets/menu-photos/syr-kosychka-bila.jpg", price: "90 грн", accent: "cream" },
       { name: "Кабаноси", photo: "assets/menu-photos/kabanosy.jpg", price: "150 грн", accent: "ember" },
-      { name: "Кабаноси курячі", price: "160 грн", accent: "gold" },
-      { name: "Вушка соєвий соус", price: "120 грн", accent: "wood" },
+      { name: "Кабаноси курячі", photo: "assets/menu-photos/kabanosy-kuryachi.jpg", price: "160 грн", accent: "gold" },
+      { name: "Вушка соєвий соус", photo: "assets/menu-photos/vushka-soievyi-sous.jpg", price: "120 грн", accent: "wood" },
       { name: "Грінки з часником", photo: "assets/menu-photos/sukharyky-z-chasnykom.jpg", price: "90 грн", accent: "wood" },
-      { name: "Джерки пікантні", price: "160 грн", accent: "ember" },
-      { name: "Джерки курячі класичні", price: "150 грн", accent: "gold" },
+      { name: "Джерки пікантні", photo: "assets/menu-photos/dzherky-pikantni.jpg", price: "160 грн", accent: "ember" },
+      { name: "Джерки курячі класичні", photo: "assets/menu-photos/dzherky-kuryachi-klasychni.jpg", price: "150 грн", accent: "gold" },
       { name: "Арахіс смажений", photo: "assets/menu-photos/arakhis-smazhenyi.jpg", price: "80 грн", accent: "stone" },
       { name: "Фісташки", photo: "assets/menu-photos/fistashky.jpg", price: "150 грн", accent: "gold" },
       { name: "Чипси картопляні", photo: "assets/menu-photos/chipsy-kartopliani.jpg", price: "80 грн", accent: "gold" }
@@ -42,7 +42,7 @@ window.ODIN_MENU_SECTIONS = [
     items: [
       { name: "Пивна дошка «Вальгалла»", photo: "assets/menu-photos/pyvna-doshka-valhalla.jpg", price: "550 грн", accent: "gold" },
       { name: "Сирна дошка «Асгард»", photo: "assets/menu-photos/syrna-doshka-asgard.jpg", price: "550 грн", accent: "cream" },
-      { name: "Винна дошка «Асгард»", price: "550 грн", accent: "berry" },
+      { name: "Винна дошка «Асгард»", photo: "assets/menu-photos/vynna-doshka-asgard.jpg", price: "550 грн", accent: "berry" },
       { name: "Дошка «ODIN»", photo: "assets/menu-photos/miasna-doshka-odin.jpg", price: "750 грн", accent: "stone" }
     ]
   },
@@ -89,11 +89,11 @@ window.ODIN_MENU_SECTIONS = [
     title: "Алкогольні напої",
     layout: "compact",
     items: [
-      { name: "Вино Pinot Grigio", price: "170 грн", accent: "cream" },
-      { name: "Вино Ігристе Prosecco", price: "170 грн", accent: "gold" },
-      { name: "Віскі JAMESON", price: "180 грн", accent: "wood" },
-      { name: "Водка Finlandia", price: "110 грн", accent: "frost" },
-      { name: "Ром Bacardi", price: "160 грн", accent: "ember" }
+      { name: "Вино Pinot Grigio", photo: "assets/menu-photos/vyno-pinot-grigio.jpg", price: "170 грн", accent: "cream" },
+      { name: "Вино Ігристе Prosecco", photo: "assets/menu-photos/vyno-igryste-prosecco.jpg", price: "170 грн", accent: "gold" },
+      { name: "Віскі JAMESON", photo: "assets/menu-photos/viski-jameson.jpg", price: "180 грн", accent: "wood" },
+      { name: "Горілка Finlandia", photo: "assets/menu-photos/horilka-finlandia.jpg", price: "110 грн", accent: "frost" },
+      { name: "Ром Bacardi", photo: "assets/menu-photos/rom-bacardi.jpg", price: "160 грн", accent: "ember" }
     ]
   },
   {
@@ -103,7 +103,7 @@ window.ODIN_MENU_SECTIONS = [
     title: "Пиво",
     layout: "compact",
     items: [
-      { name: "Пиво пляшкове Корона", photo: "assets/menu-photos/pyvo-pliashkove.jpg", price: "180 грн", accent: "gold" },
+      { name: "Пиво Corona у банці", photo: "assets/menu-photos/pyvo-corona-banka.jpg", price: "180 грн", accent: "gold" },
       { name: "Пиво розливне", photo: "assets/menu-photos/pyvo-rozlyvne.jpg", price: "100 грн", accent: "wood" }
     ]
   },

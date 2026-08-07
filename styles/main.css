@@ -2295,8 +2295,10 @@ body {
   border-radius: clamp(20px, 2.6vw, 32px);
   opacity: 1;
   object-fit: cover;
+  object-position: center;
   filter: saturate(1.08) contrast(1.04) brightness(1.16);
-  mask-image: linear-gradient(90deg, transparent 0%, rgba(0, 0, 0, 0.9) 16%, #000 32%);
+  -webkit-mask-image: none;
+  mask-image: none;
 }
 
 .menu-book .menu-card:has(.menu-card__photo) {
@@ -2398,4 +2400,26 @@ body {
   font-weight: 700;
   letter-spacing: 0.035em;
   text-transform: uppercase;
+}
+
+/* Keep every alcohol price immediately visible, including on narrow screens. */
+body[data-active-group="alcohol"] .menu-book .menu-card__body,
+body[data-active-group="alcohol"] .menu-book .menu-card:has(.menu-card__photo) .menu-card__body {
+  grid-template-rows: auto auto;
+  align-content: center;
+}
+
+body[data-active-group="alcohol"] .menu-book .price {
+  display: inline-flex !important;
+  min-width: 78px;
+  grid-row: auto !important;
+  align-self: start;
+  justify-content: center;
+  margin-top: 4px;
+  border-color: rgba(234, 211, 149, 0.72);
+  color: #120f09 !important;
+  background: linear-gradient(135deg, var(--gold-soft), var(--gold)) !important;
+  box-shadow: 0 8px 26px rgba(200, 164, 93, 0.2);
+  opacity: 1 !important;
+  visibility: visible !important;
 }
