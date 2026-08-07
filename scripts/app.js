@@ -88,7 +88,7 @@ const iconForItem = (item, layout, sectionId) => {
   if (sectionId === "soft") return name.includes("вода") ? "water" : "nonalcohol";
   if (sectionId === "coffee") return "coffee";
   if (sectionId === "shots") return "shot";
-  if (sectionId === "beer") return "alcohol";
+  if (sectionId === "beer" || sectionId === "spirits") return "alcohol";
   if (sectionId === "hookah") return "hookah";
   if (name.includes("сир")) return "cheese";
   if (name.includes("кабан") || name.includes("кур") || name.includes("мʼяс") || name.includes("м'яс")) return "meat";
@@ -111,20 +111,7 @@ const bookEyebrow = document.querySelector("#book-eyebrow");
 const bookClose = document.querySelector(".menu-book__close");
 const sourceSections = window.ODIN_MENU_SECTIONS || [];
 
-const hookahSection = {
-  id: "hookah",
-  label: "Кальян",
-  eyebrow: "Smoke ritual",
-  title: "Кальян",
-  layout: "hookah",
-  items: [
-    { name: "Подача ODIN", photo: "assets/menu-photos/hookah-podacha-odin.jpg", description: "Темна сцена з кальяном, димом і мʼяким золотим світлом.", price: "деталі в барі", accent: "gold" },
-    { name: "Мікси", photo: "assets/menu-photos/hookah-miksy.jpg", description: "Місце під майбутні авторські смаки, чаші та тютюн.", price: "скоро", accent: "stone" },
-    { name: "Атмосфера", photo: "assets/menu-photos/hookah-atmosfera.jpg", description: "Кальян не стоїть на головному екрані, а відкривається тільки в цій вкладці.", price: "ODIN", accent: "ember" }
-  ]
-};
-
-const byId = Object.fromEntries([...sourceSections, hookahSection].map((section) => [section.id, section]));
+const byId = Object.fromEntries(sourceSections.map((section) => [section.id, section]));
 
 const menuGroups = [
   {
@@ -132,14 +119,14 @@ const menuGroups = [
     label: "Їжа",
     eyebrow: "Kitchen",
     title: "Їжа",
-    sections: ["snacks", "boards"]
+    sections: ["kitchen", "snacks", "boards"]
   },
   {
     id: "alcohol",
     label: "Алкогольні напої",
     eyebrow: "Bar",
     title: "Алкогольні напої",
-    sections: ["cocktails", "beer", "shots"]
+    sections: ["cocktails", "shots", "spirits", "beer"]
   },
   {
     id: "nonalcohol",
@@ -186,7 +173,6 @@ const createMenuCard = (item, index, layout, sectionId) => {
           ${item.meta ? `<span class="item-meta">${item.meta}</span>` : ""}
         </span>
       </div>
-      <p>${item.description}</p>
       <span class="price">${item.price}</span>
     </div>
     ${item.photo ? "" : makeProductVisual(visualType)}
@@ -225,9 +211,23 @@ const renderGroupButtons = () => {
 };
 
 const renderSectionTabs = (group) => {
+  const tabIcons = {
+    kitchen: "food",
+    snacks: "snack",
+    boards: "board",
+    cocktails: "cocktail",
+    shots: "shot",
+    spirits: "alcohol",
+    beer: "alcohol",
+    soft: "water",
+    lemonades: "lemonade",
+    coffee: "coffee",
+    hookah: "hookah"
+  };
+
   bookTabs.innerHTML = group.sections.map((sectionId) => {
     const section = byId[sectionId];
-    return `<button type="button" data-section="${section.id}">${makeIcon(section.id === "hookah" ? "hookah" : section.id === "boards" ? "board" : section.id === "cocktails" ? "cocktail" : section.id === "beer" ? "alcohol" : section.id === "lemonades" ? "lemonade" : section.id === "soft" ? "water" : section.id === "coffee" ? "coffee" : section.id === "shots" ? "shot" : "snack")}<span>${section.label}</span></button>`;
+    return `<button type="button" data-section="${section.id}">${makeIcon(tabIcons[section.id] || "default")}<span>${section.label}</span></button>`;
   }).join("");
 };
 

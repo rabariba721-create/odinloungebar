@@ -16,6 +16,7 @@
   --shadow: 0 24px 80px rgba(0, 0, 0, 0.5);
   --radius: 8px;
   --header-height: 78px;
+  --font-odin-cyrillic: "Cormorant SC", Cinzel, Georgia, serif;
 }
 
 * {
@@ -2385,4 +2386,16 @@ body {
     aspect-ratio: 1 / 1;
     border-radius: 18px;
   }
+}
+
+/* ODIN-style typography for every category level, including Cyrillic labels. */
+.site-nav button,
+.hero-menu__button strong,
+.menu-book__head h2,
+.menu-book__tabs button,
+.book-page .section-head h2 {
+  font-family: var(--font-odin-cyrillic);
+  font-weight: 700;
+  letter-spacing: 0.035em;
+  text-transform: uppercase;
 }

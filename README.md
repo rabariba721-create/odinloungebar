@@ -15,7 +15,7 @@ Premium one-page Ukrainian menu website prepared for GitHub Pages.
 
 ## Edit Menu
 
-Update names, descriptions, and prices in `scripts/menu-data.js`.
+Update names and prices in `scripts/menu-data.js`.
 
 ## Logo And Photos
 
