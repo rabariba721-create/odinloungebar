@@ -43,7 +43,7 @@ window.ODIN_MENU_SECTIONS = [
       { name: "Пивна дошка «Вальгалла»", description: "Склад: кабаноси, джерки, сир-косичка та часникові грінки.", price: "550 грн", accent: "gold" },
       { name: "Сирна дошка «Асгард»", photo: "assets/menu-photos/syrna-doshka-asgard.jpg", price: "550 грн", accent: "cream" },
       { name: "Винна дошка «Асгард»", description: "Склад: сир брі, оливки, грісіні, сир дорблю та мед.", price: "550 грн", accent: "berry" },
-      { name: "Дошка «ODIN»", description: "Склад: прошуто, сир брі, салямі, картопляні чипси, вушка в соєвому соусі, грісіні та арахіс зі смаком васабі.", price: "750 грн", accent: "stone" }
+      { name: "Дошка «ODIN»", description: "Склад: прошуто, сир брі, салямі, картопляні чипси, вушка в соєвому соусі, грісіні, арахіс, васабі.", price: "750 грн", accent: "stone" }
     ]
   },
   {
