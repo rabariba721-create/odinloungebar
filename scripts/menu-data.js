@@ -41,7 +41,7 @@ window.ODIN_MENU_SECTIONS = [
     layout: "showcaseList",
     items: [
       { name: "Пивна дошка «Вальгалла»", description: "Склад: кабаноси, джерки, сир-косичка та часникові грінки.", price: "550 грн", accent: "gold" },
-      { name: "Сирна дошка «Асгард»", photo: "assets/menu-photos/syrna-doshka-asgard.jpg", price: "550 грн", accent: "cream" },
+      { name: "Сирна дошка «Асгард»", price: "550 грн", accent: "cream" },
       { name: "Винна дошка «Асгард»", description: "Склад: сир брі, оливки, грісіні, сир дорблю та мед.", price: "550 грн", accent: "berry" },
       { name: "Дошка «ODIN»", description: "Склад: прошуто, сир брі, салямі, картопляні чипси, вушка в соєвому соусі, грісіні, арахіс, васабі.", price: "750 грн", accent: "stone" }
     ]
@@ -53,10 +53,10 @@ window.ODIN_MENU_SECTIONS = [
     title: "Авторські коктейлі",
     layout: "grid",
     items: [
-      { name: "Nord", photo: "assets/menu-photos/nord.jpg", price: "290 грн", accent: "frost" },
-      { name: "After Valhalla", photo: "assets/menu-photos/after-valhalla.jpg", price: "290 грн", accent: "gold" },
-      { name: "Night", photo: "assets/menu-photos/night.jpg", price: "290 грн", accent: "stone" },
-      { name: "Rune", photo: "assets/menu-photos/rune.jpg", price: "290 грн", accent: "ember" }
+      { name: "Nord", price: "290 грн", accent: "frost" },
+      { name: "After Valhalla", price: "290 грн", accent: "gold" },
+      { name: "Night", price: "290 грн", accent: "stone" },
+      { name: "Rune", price: "290 грн", accent: "ember" }
     ]
   },
   {
@@ -75,9 +75,9 @@ window.ODIN_MENU_SECTIONS = [
       { name: "Espresso Martini", photo: "assets/menu-photos/espresso-martini.jpg", price: "270 грн", accent: "wood" },
       { name: "Pornstar Martini", photo: "assets/menu-photos/pornstar-martini.jpg", price: "270 грн", accent: "gold" },
       { name: "Clover Club", photo: "assets/menu-photos/clover-club.jpg", price: "270 грн", accent: "berry" },
-      { name: "Cuba Libre", photo: "assets/menu-photos/cuba-libre.jpg", price: "270 грн", accent: "ember" },
+      { name: "Cuba Libre", photo: "assets/menu-photos/cuba-libre.jpg?v=20260825-13", price: "270 грн", accent: "ember" },
       { name: "Margarita", photo: "assets/menu-photos/margarita.jpg", price: "270 грн", accent: "frost" },
-      { name: "Bellini", photo: "assets/menu-photos/bellini.jpg", price: "270 грн", accent: "salmon" },
+      { name: "Bellini", photo: "assets/menu-photos/bellini.jpg?v=20260825-13", price: "270 грн", accent: "salmon" },
       { name: "Negroni", photo: "assets/menu-photos/negroni.jpg", price: "270 грн", accent: "stone" }
     ]
   },
