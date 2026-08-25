@@ -47,20 +47,38 @@ window.ODIN_MENU_SECTIONS = [
     ]
   },
   {
+    id: "signature-cocktails",
+    label: "Авторські",
+    eyebrow: "ODIN signatures",
+    title: "Авторські коктейлі",
+    layout: "grid",
+    items: [
+      { name: "Nord", photo: "assets/menu-photos/nord.jpg", price: "290 грн", accent: "frost" },
+      { name: "After Valhalla", photo: "assets/menu-photos/after-valhalla.jpg", price: "290 грн", accent: "gold" },
+      { name: "Night", photo: "assets/menu-photos/night.jpg", price: "290 грн", accent: "stone" },
+      { name: "Rune", photo: "assets/menu-photos/rune.jpg", price: "290 грн", accent: "ember" }
+    ]
+  },
+  {
     id: "cocktails",
     label: "Коктейлі",
     eyebrow: "Bar",
     title: "Коктейлі",
     layout: "grid",
     items: [
-      { name: "Freya's Garden Moxito", photo: "assets/menu-photos/freyas-garden.jpg", price: "230 грн", accent: "wood" },
-      { name: "Frost of Midgard JIN tonic", photo: "assets/menu-photos/frost-of-midgard.jpg", price: "240 грн", accent: "frost" },
-      { name: "Pina Colada", photo: "assets/menu-photos/pina-colada.jpg", price: "240 грн", accent: "cream" },
-      { name: "Ragnarok LONG ISLAND", photo: "assets/menu-photos/ragnarok.jpg", price: "260 грн", accent: "ember" },
-      { name: "Sex on the Beach", photo: "assets/menu-photos/sex-on-the-beach.jpg", price: "240 грн", accent: "salmon" },
-      { name: "Strawberry Mojito", photo: "assets/menu-photos/strawberry-mojito.jpg", price: "250 грн", accent: "berry" },
-      { name: "Sun of Asgard APEROL", photo: "assets/menu-photos/sun-of-asgard.jpg", price: "250 грн", accent: "gold" },
-      { name: "Valhalla Sour", photo: "assets/menu-photos/valhalla-sour.jpg", price: "250 грн", accent: "stone" }
+      { name: "Freya’s Mojito", photo: "assets/menu-photos/freyas-garden.jpg", price: "270 грн", accent: "wood" },
+      { name: "Freya’s Raspberry Mojito", photo: "assets/menu-photos/freyas-raspberry-mojito.jpg", price: "270 грн", accent: "berry" },
+      { name: "Frost of Midgard Gin & Tonic", photo: "assets/menu-photos/frost-of-midgard.jpg", price: "240 грн", accent: "frost" },
+      { name: "Ragnarok Long Island", photo: "assets/menu-photos/ragnarok.jpg", price: "260 грн", accent: "ember" },
+      { name: "Sun of Asgard Aperol", photo: "assets/menu-photos/sun-of-asgard.jpg", price: "250 грн", accent: "gold" },
+      { name: "Valhalla Sour", photo: "assets/menu-photos/valhalla-sour.jpg", price: "250 грн", accent: "stone" },
+      { name: "Espresso Martini", photo: "assets/menu-photos/espresso-martini.jpg", price: "270 грн", accent: "wood" },
+      { name: "Pornstar Martini", photo: "assets/menu-photos/pornstar-martini.jpg", price: "270 грн", accent: "gold" },
+      { name: "Clover Club", photo: "assets/menu-photos/clover-club.jpg", price: "270 грн", accent: "berry" },
+      { name: "Cuba Libre", photo: "assets/menu-photos/cuba-libre.jpg", price: "270 грн", accent: "ember" },
+      { name: "Margarita", photo: "assets/menu-photos/margarita.jpg", price: "270 грн", accent: "frost" },
+      { name: "Bellini", photo: "assets/menu-photos/bellini.jpg", price: "270 грн", accent: "salmon" },
+      { name: "Negroni", photo: "assets/menu-photos/negroni.jpg", price: "270 грн", accent: "stone" }
     ]
   },
   {
@@ -70,16 +88,8 @@ window.ODIN_MENU_SECTIONS = [
     title: "Шоти",
     layout: "shots",
     items: [
-      { name: "B-52", photo: "assets/menu-photos/b-52.jpg", price: "150 грн", accent: "gold" },
-      { name: "Black Widow", photo: "assets/menu-photos/black-widow.jpg", price: "160 грн", accent: "stone" },
-      { name: "Boyarsky", photo: "assets/menu-photos/boyarsky.jpg", price: "140 грн", accent: "stone" },
-      { name: "Bubble Gum", photo: "assets/menu-photos/bubble-gum.jpg", price: "160 грн", accent: "berry" },
-      { name: "Ferrari", photo: "assets/menu-photos/ferrari.jpg", price: "170 грн", accent: "gold" },
-      { name: "Green Mexican", photo: "assets/menu-photos/green-mexican.jpg", price: "150 грн", accent: "frost" },
-      { name: "Hiroshima", photo: "assets/menu-photos/hiroshima.jpg", price: "150 грн", accent: "ember" },
-      { name: "Jelly Fish", photo: "assets/menu-photos/jelly-fish.jpg", price: "150 грн", accent: "cream" },
-      { name: "Kamikaze", photo: "assets/menu-photos/kamikaze.jpg", price: "150 грн", accent: "frost" },
-      { name: "Mad Dog", photo: "assets/menu-photos/mad-dog.jpg", price: "150 грн", accent: "ember" }
+      { name: "Green Mexican", photo: "assets/menu-photos/green-mexican.jpg", price: "180 грн", accent: "frost" },
+      { name: "B-52", photo: "assets/menu-photos/b-52.jpg", price: "180 грн", accent: "gold" }
     ]
   },
   {
@@ -91,9 +101,20 @@ window.ODIN_MENU_SECTIONS = [
     items: [
       { name: "Вино Pinot Grigio", photo: "assets/menu-photos/vyno-pinot-grigio.jpg", price: "170 грн", accent: "cream" },
       { name: "Вино Ігристе Prosecco", photo: "assets/menu-photos/vyno-igryste-prosecco.jpg", price: "170 грн", accent: "gold" },
+      { name: "Вино червоне сухе", photo: "assets/menu-photos/vyno-chervone-sukhe.jpg", price: "170 грн", accent: "berry" },
+      { name: "Вино біле сухе", photo: "assets/menu-photos/vyno-pinot-grigio.jpg", price: "170 грн", accent: "cream" },
       { name: "Віскі JAMESON", photo: "assets/menu-photos/viski-jameson.jpg", price: "180 грн", accent: "wood" },
       { name: "Горілка Finlandia", photo: "assets/menu-photos/horilka-finlandia.jpg", price: "110 грн", accent: "frost" },
-      { name: "Ром Bacardi", photo: "assets/menu-photos/rom-bacardi.jpg", price: "160 грн", accent: "ember" }
+      { name: "Ром Bacardi", photo: "assets/menu-photos/rom-bacardi.jpg", price: "160 грн", accent: "ember" },
+      { name: "Distil", price: "140 грн", accent: "frost" },
+      { name: "Baileys", price: "140 грн", accent: "cream" },
+      { name: "Bacardi Carta Blanca", price: "140 грн", accent: "frost" },
+      { name: "Bacardi Spiced", price: "140 грн", accent: "ember" },
+      { name: "Beefeater", price: "140 грн", accent: "berry" },
+      { name: "Jägermeister", price: "140 грн", accent: "wood" },
+      { name: "Metaxa 5★", price: "140 грн", accent: "gold" },
+      { name: "Olmeca Silver", price: "140 грн", accent: "stone" },
+      { name: "Ballantine’s", price: "140 грн", accent: "cream" }
     ]
   },
   {
@@ -103,8 +124,11 @@ window.ODIN_MENU_SECTIONS = [
     title: "Пиво",
     layout: "compact",
     items: [
-      { name: "Пиво Corona у банці", photo: "assets/menu-photos/pyvo-corona-banka.jpg", price: "180 грн", accent: "gold" },
-      { name: "Пиво розливне", photo: "assets/menu-photos/pyvo-rozlyvne.jpg", price: "100 грн", accent: "wood" }
+      { name: "Corona Extra", price: "170 грн", accent: "gold" },
+      { name: "Carlsberg 0,5 л", price: "120 грн", accent: "wood" },
+      { name: "Carlsberg 0,3 л", price: "100 грн", accent: "wood" },
+      { name: "1664 Blanc 0,5 л", price: "120 грн", accent: "frost" },
+      { name: "1664 Blanc 0,3 л", price: "100 грн", accent: "frost" }
     ]
   },
   {
@@ -118,7 +142,9 @@ window.ODIN_MENU_SECTIONS = [
       { name: "Coca-Cola", photo: "assets/menu-photos/coca-cola.jpg", price: "80 грн", accent: "stone" },
       { name: "Cola Zero", photo: "assets/menu-photos/cola-zero.jpg", price: "80 грн", accent: "stone" },
       { name: "Schweppes", photo: "assets/menu-photos/schweppes.jpg", price: "100 грн", accent: "wood" },
-      { name: "Сік", photo: "assets/menu-photos/sik.jpg", price: "60 грн", accent: "gold" }
+      { name: "Сік", photo: "assets/menu-photos/sik.jpg", price: "60 грн", accent: "gold" },
+      { name: "Квас", photo: "assets/menu-photos/kvas.jpg", price: "100 грн", accent: "wood" },
+      { name: "Вода негазована", photo: "assets/menu-photos/voda-borjomi.jpg", price: "80 грн", accent: "frost" }
     ]
   },
   {
@@ -128,16 +154,12 @@ window.ODIN_MENU_SECTIONS = [
     title: "Лимонади",
     layout: "compact",
     items: [
-      { name: "Ананас-Кокос", photo: "assets/menu-photos/ananas-kokos.jpg", price: "150 грн", accent: "cream" },
-      { name: "Кавун-М'ята", photo: "assets/menu-photos/kavun-miata.jpg", price: "150 грн", accent: "salmon" },
-      { name: "Класичний", photo: "assets/menu-photos/limonad-klasychnyi.jpg", price: "130 грн", accent: "gold" },
-      { name: "Лісові ягоди", photo: "assets/menu-photos/lisovi-yahody.jpg", price: "150 грн", accent: "berry" },
-      { name: "Манго-Маракуя", photo: "assets/menu-photos/manho-marakuia.jpg", price: "150 грн", accent: "gold" },
-      { name: "Мохіто безалкогольний", photo: "assets/menu-photos/mokhito-bezalkoholnyi.jpg", price: "150 грн", accent: "wood" },
-      { name: "Персик-Імбир", photo: "assets/menu-photos/persyk-imbyr.jpg", price: "150 грн", accent: "ember" },
-      { name: "Полуниця-М'ята", photo: "assets/menu-photos/polunytsia-miata.jpg", price: "150 грн", accent: "berry" },
-      { name: "Смородина-Базилік", photo: "assets/menu-photos/smorodyna-bazylik.jpg", price: "150 грн", accent: "stone" },
-      { name: "Яблуко-Ківі", photo: "assets/menu-photos/yabluko-kivi.jpg", price: "150 грн", accent: "frost" }
+      { name: "Mojito", photo: "assets/menu-photos/mokhito-bezalkoholnyi.jpg", price: "200 грн", accent: "wood" },
+      { name: "Raspberry Mojito", photo: "assets/menu-photos/polunytsia-miata.jpg", price: "200 грн", accent: "berry" },
+      { name: "Orange Coconut", photo: "assets/menu-photos/ananas-kokos.jpg", price: "200 грн", accent: "salmon" },
+      { name: "ODIN", photo: "assets/menu-photos/limonad-klasychnyi.jpg", price: "200 грн", accent: "gold" },
+      { name: "Raspberry Mint", photo: "assets/menu-photos/lisovi-yahody.jpg", price: "200 грн", accent: "berry" },
+      { name: "Passion Fruit Mango", photo: "assets/menu-photos/manho-marakuia.jpg", price: "200 грн", accent: "gold" }
     ]
   },
   {
@@ -152,7 +174,6 @@ window.ODIN_MENU_SECTIONS = [
       { name: "Американо з молоком", photo: "assets/menu-photos/amerykano-z-molokom.jpg", price: "90 грн", accent: "cream" },
       { name: "Еспресо", photo: "assets/menu-photos/espreso.jpg", price: "80 грн", accent: "stone" },
       { name: "Еспресо з молоком", photo: "assets/menu-photos/espreso-z-molokom.jpg", price: "90 грн", accent: "cream" },
-      { name: "Какао", photo: "assets/menu-photos/kakao.jpg", price: "120 грн", accent: "wood" },
       { name: "Капучино", photo: "assets/menu-photos/kapuchyno.jpg", price: "120 грн", accent: "cream" },
       { name: "Лате", photo: "assets/menu-photos/late.jpg", price: "120 грн", accent: "gold" }
     ]
@@ -164,9 +185,10 @@ window.ODIN_MENU_SECTIONS = [
     title: "Кальяни",
     layout: "hookah",
     items: [
-      { name: "Hookah classic", photo: "assets/menu-photos/hookah-podacha-odin.jpg", price: "600 грн", accent: "gold" },
-      { name: "Hookah light", photo: "assets/menu-photos/hookah-miksy.jpg", price: "550 грн", accent: "stone" },
-      { name: "Hookah Premium", photo: "assets/menu-photos/hookah-atmosfera.jpg", price: "650 грн", accent: "ember" }
+      { name: "FRUIT MIX", photo: "assets/menu-photos/hookah-podacha-odin.jpg", price: "600 грн", accent: "gold" },
+      { name: "SWEET MIX", photo: "assets/menu-photos/hookah-miksy.jpg", price: "600 грн", accent: "cream" },
+      { name: "FRESH MIX", photo: "assets/menu-photos/hookah-atmosfera.jpg", price: "550 грн", accent: "frost" },
+      { name: "SIGNATURE", photo: "assets/menu-photos/hookah-podacha-odin.jpg", price: "700 грн", accent: "ember" }
     ]
   }
 ];

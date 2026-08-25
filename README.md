@@ -21,7 +21,7 @@ Update names and prices in `scripts/menu-data.js`.
 
 - `assets/odin-logo.jpg` is used for the loader, header, and footer.
 - Hero hookah uses a detailed procedural Three.js model with `assets/hookah-model.svg` as fallback.
-- Menu reference photos are intentionally not included in the website UI.
+- Menu photos are stored in `assets/menu-photos/` and displayed in the menu cards.
 - Menu content is rewritten as editable structured text in `scripts/menu-data.js`.
 
 

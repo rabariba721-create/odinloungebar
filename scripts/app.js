@@ -83,7 +83,7 @@ const groupIcons = {
 const iconForItem = (item, layout, sectionId) => {
   const name = item.name.toLowerCase();
   if (sectionId === "boards") return "board";
-  if (sectionId === "cocktails") return "cocktail";
+  if (sectionId === "cocktails" || sectionId === "signature-cocktails") return "cocktail";
   if (sectionId === "lemonades") return "lemonade";
   if (sectionId === "soft") return name.includes("вода") ? "water" : "nonalcohol";
   if (sectionId === "coffee") return "coffee";
@@ -126,7 +126,7 @@ const menuGroups = [
     label: "Алкогольні напої",
     eyebrow: "Bar",
     title: "Алкогольні напої",
-    sections: ["cocktails", "shots", "spirits", "beer"]
+    sections: ["signature-cocktails", "cocktails", "shots", "spirits", "beer"]
   },
   {
     id: "nonalcohol",
@@ -218,6 +218,7 @@ const renderSectionTabs = (group) => {
     kitchen: "food",
     snacks: "snack",
     boards: "board",
+    "signature-cocktails": "cocktail",
     cocktails: "cocktail",
     shots: "shot",
     spirits: "alcohol",
