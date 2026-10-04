@@ -159,7 +159,7 @@ window.ODIN_MENU_SECTIONS = [
     title: "Лимонади",
     layout: "compact",
     items: [
-      { name: "Strawberry Mojito", price: "230 грн", accent: "berry" },
+      { name: "Strawberry Mojito", photo: "assets/menu-photos/polunytsia-miata.jpg", price: "230 грн", accent: "berry" },
       { name: "Orange Coconut", photo: "assets/menu-photos/ananas-kokos.jpg", price: "230 грн", accent: "salmon" },
       { name: "ODIN", photo: "assets/menu-photos/limonad-klasychnyi.jpg", price: "230 грн", accent: "gold" },
       { name: "Raspberry Mint", photo: "assets/menu-photos/lisovi-yahody.jpg", price: "230 грн", accent: "berry" },
